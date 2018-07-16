@@ -1,0 +1,27 @@
+security:
+  user:
+    password: password
+  oauth2:
+    resource:
+      userInfoUri: http://authserver/user
+    client:
+      clientId: acme
+      clientSecret: acmesecret
+      authorized-grant-types: authorization_code,refresh_token,password
+      scope: openid
+      
+spring:
+  application:
+    name: authserver
+  zipkin:
+    baseUrl: http://zipkin/
+  sleuth:
+    sampler:
+      percentage: 1.0
+
+server:
+  port: 8080
+  
+zuul:
+  ribbon:
+    listOfServers: zuul:8080

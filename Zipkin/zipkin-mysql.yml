@@ -171,10 +171,10 @@ objects:
           resources:
             limits:
               cpu: "400m"
-              memory: "800Mi"
+              memory: "400Mi"
             requests:
               cpu: "200m"
-              memory: "200Mi"
+              memory: "100Mi"
     triggers:
     - type: ConfigChange
 - apiVersion: v1

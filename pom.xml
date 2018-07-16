@@ -18,6 +18,7 @@
         <module>Presentation</module>
         <module>Sales</module>
         <module>Salesv2</module>
+        <module>authserver</module>
         <module>Zuul</module>
     </modules>
 

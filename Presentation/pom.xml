@@ -22,8 +22,8 @@
         <fabric8.maven.plugin.version>3.5.30</fabric8.maven.plugin.version>
         <fabric8.resources.requests.memory>64Mi</fabric8.resources.requests.memory>
         <fabric8.generator.from>registry.access.redhat.com/redhat-openjdk-18/openjdk18-openshift</fabric8.generator.from>
-        <spring-boot.bom.version>1.5.8.Final-redhat-1</spring-boot.bom.version>
-        <springboot.version>1.5.8.RELEASE</springboot.version>
+        <spring-boot.bom.version>1.5.10.SP1</spring-boot.bom.version>
+        <springboot.version>1.5.10.RELEASE</springboot.version>
     </properties>
 
     <dependencyManagement>
@@ -39,6 +39,14 @@
     </dependencyManagement>
 
     <dependencies>
+   		 <dependency>
+			<groupId>org.springframework.security.oauth</groupId>
+			<artifactId>spring-security-oauth2</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-jwt</artifactId>
+		</dependency>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-sleuth-zipkin</artifactId>
@@ -52,7 +60,7 @@
 
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-hystrix</artifactId>
+            <artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
         </dependency>
 
         <!--To support Java 8 Date format serialization-->
@@ -64,7 +72,7 @@
 
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-ribbon</artifactId>
+            <artifactId>spring-cloud-starter-netflix-ribbon</artifactId>
         </dependency>
 
         <dependency>

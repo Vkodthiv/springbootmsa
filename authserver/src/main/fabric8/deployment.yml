@@ -5,8 +5,8 @@ spec:
       containers:
         - resources:
             requests:
+              cpu: '200m'
+              memory: '200Mi'
+            limits:
               cpu: '400m'
               memory: '400Mi'
-            limits:
-              cpu: '800m'
-              memory: '800Mi'
